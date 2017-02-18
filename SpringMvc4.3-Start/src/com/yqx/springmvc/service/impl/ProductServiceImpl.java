@@ -26,7 +26,6 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Product add(Product product) {
-		// TODO Auto-generated method stub
 		long newid=generator.incrementAndGet();
 		product.setId(newid);
 		
@@ -37,7 +36,6 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Product get(long id) {
-		// TODO Auto-generated method stub
 		return products.get(id);
 	}
     

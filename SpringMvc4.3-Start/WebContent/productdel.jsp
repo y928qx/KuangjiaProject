@@ -24,39 +24,6 @@ Country:${product.country}<br/>
 <!-- 修改重新填写 -->
 <form action="">
 		<table border="1">
-			<%-- 		<tr>
-				<td>属性</td>
-				<td>值</td>
-				<td>删除:</td>
-				<td>修改:</td>
-			</tr>
-	
-			<tr>
-				<td>Product ID:</td>
-				<td>${product.name}</td>
-			<td><a href="delete.action?empID=${empID} ">删除</a></td>
-			</tr>
-			<tr>
-				<td>Description:</td>
-				<td>${product.desription}</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Price:</td>
-				<td>${product.price}</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Color:</td>
-				<td>${product.color}</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Country:</td>
-				<td>${product.country}</td>
-				<td></td>
-			</tr> --%>
-		
 		
 		<tr>
 		<td>Product ID:</td>
@@ -74,12 +41,7 @@ Country:${product.country}<br/>
 		<td>${product.country}</td>
 		<td>修改</td>
 		</tr>
-		
-		
-		
-		
 		</table>
 	</form>
-
 </body>
 </html>

@@ -13,9 +13,7 @@
 		Tips:${message}<br /> Product ID:${product.id}<br /> product
 		Name:${product.name}<br /> Description:${product.desription}<br />
 		Price:${product.price}<br /> Color:${product.color}<br />
-		Country:${product.country}<br />
+		Country:${product.country}<br/>
 	</div>
-
-	
 </body>
 </html>

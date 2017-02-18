@@ -51,27 +51,9 @@ public class ProductController {
 		return "redirect:/product_view/" + saveProduct.getId() + ".action";
 	
 	}
-         /*  public String qq(){HttpSession session = request.getSession();
-        	   String name = request.getParameter("uname");
-           }
-	*/
+       
 	
 	//
-	// 从下面开始
-	/*@RequestMapping(value = "/product_del", method = RequestMethod.POST)
-
-	public ModelAndView toPage(@PathVariable("pageName1") String pageName1,
-			@PathVariable("pageName2") String pageName2) {
-		ModelAndView mv = new ModelAndView(pageName1 + "/" + pageName2);
-		return mv;
-	}
-
-	public String delProduct() {
-		logger.info("delProduct 被调用");
-		return "123";
-	}*/
-
-	
 	
 	// http://localhost:8080/springMvc4.3-start/product_view/2.action?id=1
 	@RequestMapping(value = "/product_view/{id}") // {}内为id的路径变量
