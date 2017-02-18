@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd ">
+
+	<bean id="dataType" class="com.yqx.spring.type.DataType">
+	<!-- 使用<![CDATA[EP&G]]>标记吃力xml特殊字符 -->
+		<property name="specialCharacter1">
+			
+			<value> <![CDATA[EP&G]]></value>
+		</property>
+		
+		<!-- 把xml的特殊字符替换为实体引用 -->
+		<property name="specialCharacter2">
+			<value>EP&amp;G</value>
+		</property>
+		<!-- 定义内部bean -->
+		<property name="innerBean">
+			<bean class="com.yqx.spring.type.User">
+				<property name="username" value="qwerwr"/>
+			</bean>
+		</property>
+	<!--注入list类型 -->
+		<property name="list">
+			<list>
+				<!-- 定义list中的元素 -->
+				<value>乒乓球</value>
+				<value>羽毛球</value>
+				<value>网球</value>
+				<value>篮球</value>
+				<value>足球</value>
+				<value>玻璃球</value>
+			</list>
+		</property>
+		<!-- 	注入array类型 -->
+		<property name="array">
+			<list>
+				<!-- 定义list中的元素 -->
+				<value>乒乓球</value>
+				<value>羽毛球</value>
+				<value>网球</value>
+				<value>篮球</value>
+				<value>足球</value>
+				<value>玻璃球</value>
+			</list>
+		</property>
+		<!-- 	注入set类型 -->
+		<property name="set">
+			<list>
+				<!-- 定义list中的元素 -->
+				<value>乒乓球</value>
+				<value>羽毛球</value>
+				<value>网球</value>
+				<value>篮球</value>
+				<value>足球</value>
+				<value>玻璃球</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="basketball" value="篮球"/>
+				<entry key="tabletannie" value="乒乓球"/>
+				<entry key="football" value="足球"/>
+				<entry key="glassball" value="玻璃球"/>
+				<entry key="tennis" value="网球"/>
+			</map>
+		</property>
+         <!-- 注入property类型 -->
+		<property name="props">
+			<props>
+				<prop key="basketball">篮球</prop>
+				<prop key="tabletannie">乒乓球</prop>
+				<prop key="football">足球</prop>
+				<prop key="glassball">玻璃球</prop>
+				<prop key="tennis">网球</prop>
+			</props>
+		</property>
+
+		<!-- 注入空的字符串 -->
+		<property name="emptyValue">
+			<value></value>
+		</property>
+		<!-- 注入null值 -->
+		<property name="nullValue">
+			<null />
+		</property>
+	</bean>
+</beans>
