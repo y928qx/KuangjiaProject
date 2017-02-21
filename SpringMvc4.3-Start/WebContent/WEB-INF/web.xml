@@ -3,34 +3,30 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
-	<display-name>SpringMvc4.3-Start</display-name>
+	<display-name>SpringMVC4.3-start</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
 
-<!-- 解决中文乱码，配置的过滤器如下 -->
+	</welcome-file-list>
+	<!-- 配置过滤器解决中文乱码问题 -->
 	<filter>
-		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 		<init-param>
-			<param-name>Encoding</param-name>
+			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
 		</init-param>
 		<init-param>
 			<param-name>forceEncoding</param-name>
 			<param-value>true</param-value>
 		</init-param>
+
 	</filter>
 	<filter-mapping>
-		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-name>characterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-
-
-
-
-	<!-- 配置springmvc分发器 -->
+	<!-- 配置springmvc的分发器 -->
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -43,6 +39,28 @@
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<!-- 处理所有请求 -->
+		<!-- <url-pattern></url-pattern> -->
 		<url-pattern>*.action</url-pattern>
 	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	<!-- <servlet>
+   <servlet-name>goto</servlet-name>
+   <jsp-file>/WEB-INF/jsp/productdel.jsp</jsp-file>  要跳转到的页面
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>goto</servlet-name>
+   <url-pattern>/productdel</url-pattern>
+  </servlet-mapping>
+	 -->
+	
+	
+	
+	
+	
+	
 </web-app>

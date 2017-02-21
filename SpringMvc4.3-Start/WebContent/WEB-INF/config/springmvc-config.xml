@@ -5,28 +5,24 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-
-
 	<!-- 使用传统的配置方式 -->
-<!-- 	<bean name="/product_input.action" class="com.yqx.springmvc.controller.InputProductController"/>
-<bean name="/product_save.action" class="com.yqx.springmvc.controller.SaveProductController"/> -->
-
-
-
-
-	<!-- 使用基于注解的配置方式 -->
+	<!-- <bean name="/product_input.action" class="com.zlj.springmvc.controller.InputProductController"></bean> 
+		<bean name="/product_save.action" class="com.zlj.springmvc.controller.SaveProductController"></bean> -->
+	<!-- 使用注解的配置方式 -->
 	<!-- 自动扫描注解所在的包 -->
-	<context:component-scan base-package="com.yqx.springmvc.controller" />
-	<context:component-scan base-package="com.yqx.springmvc.service.*" />
-
+	<context:component-scan base-package="com.zlj.springmvc.controller"></context:component-scan>
+	<context:component-scan base-package="com.zlj.springmvc.service.*"></context:component-scan>
+	<!-- <mvc:resources/>元素指示springmvc哪些静态资源需要单独处理(不经过dispatch Servlet),如果没有<mvc:annotation-driven>,<mvc:resources/>元素会阻止任意控制器被调用，若不需要使用Resources， 
+		则不需要<mvc:annotation-driven> -->
 	<mvc:annotation-driven />
-	<mvc:resources location="/" mapping="/*.html" />
-	<!-- 配置springmvc的图形解析器 -->
-	<!-- 师徒解析器自动增加前缀和后缀 -->
+	<mvc:resources location="/" mapping="/*.html"></mvc:resources>
+	<!-- 配置springmvc的试图解析器 -->
+	<!-- 视图解析器自动增加前缀后缀 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+
 	</bean>
 
 </beans>
